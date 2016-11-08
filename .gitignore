@@ -22,10 +22,7 @@ _testmain.go
 *.exe
 *.test
 *.prof
-<<<<<<< HEAD
 
 .vscode/
 
 /debug
-=======
->>>>>>> 30ba60624e8f537ed6f2a9dea8b8cc6535f50063
