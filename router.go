@@ -16,7 +16,6 @@ type Router interface {
 	GetRoutes() []Route
 	AddRoute(route Route)
 	RemoveRoute(name string)
-	Bind()
 }
 
 type defaultRouter struct {
@@ -29,7 +28,7 @@ func NewRouter() Router {
 }
 
 // Bind binds route handlers to the http.HandlerFunc
-func (r *defaultRouter) Bind() {
+func Bind(r Router) {
 	for _, rt := range r.GetRoutes() {
 		http.HandleFunc(rt.Path, rt.Handler)
 	}
